@@ -70,7 +70,7 @@ export default function Hero() {
           </p>
 
           <a
-            href="https://wa.me/5549991626262"
+            href="https://wa.me/5549991626262?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20falar%20com%20a%20advogada."
             target="_blank"
             rel="noopener noreferrer"
             className="btn-cta mt-10 hidden w-full max-w-sm md:inline-block"
@@ -97,7 +97,7 @@ export default function Hero() {
       {/* CTA acima da faixa (apenas mobile) */}
       <div className="relative z-20 px-6 pb-8 md:hidden">
         <a
-          href="https://wa.me/5549991626262"
+          href="https://wa.me/5549991626262?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20falar%20com%20a%20advogada."
           target="_blank"
           rel="noopener noreferrer"
           className="btn-cta w-full"
