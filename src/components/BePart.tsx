@@ -52,7 +52,7 @@ export default function BePart() {
         </div>
 
         {/* Foto com efeito fluid reveal */}
-        <div className="h-72 md:h-auto">
+        <div className="h-[440px] md:h-auto md:min-h-[620px]">
           <BlobReveal
             image={{ src: "/images/karolinebrasilimg.webp" }}
             startAlign="top"
