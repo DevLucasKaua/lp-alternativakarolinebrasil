@@ -1,0 +1,168 @@
+@import "tailwindcss";
+
+/* ===== Custom Theme ===== */
+@theme inline {
+  /* Fundos claros */
+  --color-cream: #fbf3e4;
+  --color-cream-soft: #fdf8ec;
+  --color-card: #fffcf4;
+  --color-cream-tint: #fbf1dc;
+
+  /* Escuros */
+  --color-plum: #2d0714;
+  --color-plum-deep: #23050f;
+  --color-wine: #571317;
+  --color-maroon: #5c1218;
+
+  /* Acentos */
+  --color-crimson: #a81e2c;
+  --color-rosewood: #7a2430;
+  --color-rose: #cf8288;
+
+  /* Textos */
+  --color-title: #8e897f;
+  --color-title-dark: #55504a;
+  --color-cream-text: #f5ecd7;
+  --color-body: #6d6a66;
+  --color-line: #e3d5be;
+
+  --font-display: var(--font-prata), "Prata", Georgia, serif;
+  --font-body: var(--font-nunito), "Nunito Sans", "Helvetica Neue", Arial,
+    sans-serif;
+}
+
+/* ===== Base Styles ===== */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+  }
+
+  body {
+    background-color: var(--color-cream);
+    color: var(--color-body);
+    font-family: var(--font-body);
+    font-weight: 400;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: clip;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    font-weight: 400;
+    line-height: 1.15;
+  }
+
+  ::selection {
+    background-color: var(--color-wine);
+    color: #fff;
+  }
+
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: var(--color-cream);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-wine);
+    border-radius: 4px;
+  }
+}
+
+/* ===== Components ===== */
+@layer components {
+  /* Faixa de serviços (hero) e fitas diagonais */
+  .marquee-track {
+    display: flex;
+    width: max-content;
+    animation: marquee 40s linear infinite;
+  }
+
+  .marquee-track-fast {
+    display: flex;
+    width: max-content;
+    animation: marquee 28s linear infinite;
+  }
+
+  .marquee-track-reverse {
+    display: flex;
+    width: max-content;
+    animation: marquee-reverse 32s linear infinite;
+  }
+
+  /* Botão CTA padrão */
+  .btn-cta {
+    display: inline-block;
+    background-color: var(--color-wine);
+    color: #fff;
+    font-family: var(--font-body);
+    font-weight: 800;
+    font-size: 0.8rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 1.45rem 3.2rem;
+    border-radius: 0.8rem;
+    box-shadow: 0 18px 35px -18px rgba(87, 19, 23, 0.55);
+    transition: transform 0.25s ease, box-shadow 0.25s ease,
+      background-color 0.25s ease;
+  }
+
+  .btn-cta:hover {
+    transform: translateY(-2px);
+    background-color: #6a181d;
+    box-shadow: 0 22px 40px -18px rgba(87, 19, 23, 0.65);
+  }
+
+  /* Selo/etiqueta de seção — claro */
+  .section-badge {
+    display: inline-block;
+    border: 1px solid var(--color-rose);
+    color: var(--color-crimson);
+    font-family: var(--font-display);
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    padding: 0.55rem 1.35rem;
+    border-radius: 0.45rem;
+    background: transparent;
+  }
+
+  /* Selo numerado vermelho dos cards */
+  .num-badge {
+    display: inline-block;
+    background-color: var(--color-crimson);
+    color: #fff;
+    font-family: var(--font-display);
+    font-size: 0.72rem;
+    letter-spacing: 0.12em;
+    padding: 0.35rem 1.1rem;
+    border-radius: 0.4rem;
+  }
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes marquee-reverse {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
