@@ -15,9 +15,9 @@ export default function Footer() {
         </div>
         <div className="text-center text-[0.92rem] leading-relaxed text-cream-text/90 md:text-right">
           <p>
-            Página produzida com carinho por{" "}
+            Página produzida por{" "}
             <a
-              href="https://instagram.com/e3digital"
+              href="https://www.instagram.com/e3.digital"
               target="_blank"
               rel="noopener noreferrer"
               className="underline-offset-2 hover:underline"
