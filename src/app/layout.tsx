@@ -43,7 +43,7 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Karoline Brasil" }],
   creator: "Karoline Brasil",
-  metadataBase: new URL("https://karolinebrasil.com.br"),
+  metadataBase: new URL("https://lp.karolinebrasil.com.br"),
   alternates: {
     canonical: "/",
   },
@@ -57,7 +57,7 @@ export const metadata: Metadata = {
     title: "Karoline Brasil | Advocacia Estratégica e Humana",
     description:
       "Advocacia estratégica e humana para quem quer ser defendido de verdade. Direito Penal, Médico, Família, Holding Familiar e Inventário.",
-    url: "https://karolinebrasil.com.br",
+    url: "https://lp.karolinebrasil.com.br",
     siteName: "Karoline Brasil Advocacia",
     locale: "pt_BR",
     type: "website",
@@ -76,6 +76,37 @@ export const metadata: Metadata = {
   },
 };
 
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "LegalService",
+  name: "Karoline Brasil Advocacia",
+  description:
+    "Advocacia estratégica e humana. Direito Penal, Direito Médico, Direito de Família, Holding Familiar e Inventário.",
+  url: "https://lp.karolinebrasil.com.br",
+  telephone: "+5549991626262",
+  image: "https://lp.karolinebrasil.com.br/images/og-image.jpg",
+  priceRange: "$$",
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "São Miguel do Oeste",
+    addressRegion: "SC",
+    addressCountry: "BR",
+  },
+  areaServed: "BR",
+  founder: {
+    "@type": "Person",
+    name: "Karoline Brasil",
+    jobTitle: "Advogada",
+  },
+  knowsAbout: [
+    "Direito Penal",
+    "Direito Médico",
+    "Direito de Família",
+    "Holding Familiar",
+    "Inventário e Sucessões",
+  ],
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -86,7 +117,13 @@ export default function RootLayout({
       lang="pt-BR"
       className={`h-full antialiased ${prata.variable} ${nunito.variable}`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        />
+        {children}
+      </body>
     </html>
   );
 }
