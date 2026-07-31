@@ -136,7 +136,7 @@ function QualificationCard({
       {withCta && (
         <div className="mt-auto pt-8">
           <a
-            href="https://wa.me/5549991626262"
+            href="https://wa.me/5549991626262?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20falar%20com%20a%20advogada."
             target="_blank"
             rel="noopener noreferrer"
             className="btn-cta w-full"
