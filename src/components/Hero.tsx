@@ -84,12 +84,12 @@ export default function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.9, delay: 0.15 }}
-          className="relative flex items-end justify-center md:justify-end"
+          className="relative -mt-10 flex items-end justify-center md:mt-0 md:justify-end"
         >
           <img
             src="/images/karoline-hero-cropped.webp"
             alt="Karoline Brasil, advogada"
-            className="relative z-10 max-h-[580px] w-auto max-w-full object-contain object-bottom md:max-h-[680px]"
+            className="relative z-10 max-h-[540px] w-auto max-w-full translate-x-8 object-contain object-bottom md:max-h-[680px] md:origin-bottom-right md:scale-[1.05] md:translate-x-10"
           />
         </motion.div>
       </div>
